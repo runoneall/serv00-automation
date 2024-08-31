@@ -28,5 +28,7 @@ jobs:
           SSH_INFO: ${{ secrets.SSH_INFO }}
           COMMAND: ${{ secrets.COMMAND }}
           PUSHURL: ${{ secrets.PUSHURL }}
+          USERID: ${{ secrets.USERID }}
+          USERTYPE: ${{ secrets.USERTYPE }}
           
         run: python run.py
