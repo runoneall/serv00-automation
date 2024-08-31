@@ -7,6 +7,8 @@ import ast
 SSH_INFO = ast.literal_eval(os.getenv('SSH_INFO', '[]'))
 COMMAND = ast.literal_eval(os.getenv('COMMAND', '[]'))
 PUSHURL = os.getenv('PUSHURL', '')
+USERID = os.getenv('USERID', '')
+USERTYPE = os.getenv('USERTYPE', '')
 
 # ssh login
 SSHClient = paramiko.SSHClient()
@@ -31,8 +33,8 @@ for Item in SSH_INFO:
 print('Push Response ...')
 req_data = {
     'from': 'Github Serv00 Auto Login Action',
-    'to': 2625640,
-    'type': 'user',
+    'to': USERID,
+    'type': USERTYPE,
     'content': f'Auto Login Response\n{Log}'
 }
 rep_data = requests.post(PUSHURL, json=req_data)
