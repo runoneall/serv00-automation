@@ -25,8 +25,8 @@
 - SSH_INFO (一行一个, 遵行Python3.x语法)
   ```
    [
-     {"hostname": "地址1", "username": "用户名", "password": "密码"},
-     {"hostname": "地址2", "username": "用户名", "password": "密码"},
+     {"hostname": "地址1", "username": "用户名1", "password": "密码1"},
+     {"hostname": "地址2", "username": "用户名2", "password": "密码2"},
    ]
   ```
 - USERID (直接填入你的用户Id)
