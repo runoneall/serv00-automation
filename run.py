@@ -14,11 +14,11 @@ SSHClient.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 Log = str()
 for Item in SSH_INFO:
     print('Connect Server ...')
-    Log += f"---\nConnect Server: {Item['hostname']}\n"
+    Log += f"---\nConnect Server: `{Item['hostname']}`\n"
     SSHClient.connect(Item['hostname'], username=Item['username'], password=Item['password'])
     print('Run Command ...')
     for Line in COMMAND:
-        Log += f'Run Command: {Line}\n'
+        Log += f'Run Command: `{Line}`\n'
         stdin, stdout, stderr = SSHClient.exec_command(Line)
         output = stdout.read().decode('utf-8')
         error = stderr.read().decode('utf-8')
