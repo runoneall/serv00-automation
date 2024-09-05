@@ -32,7 +32,7 @@ for Item in SSH_INFO:
     try:
         SSHClient.connect(Item['hostname'], username=Item['username'], password=Item['password'], timeout=180)
     except:
-        print('!!! Connect Failed !!!')
+        print('---\n!!! Connect Failed !!!')
         YunhuPush(Content='# !!! Connect Failed !!!')
         exit()
     print('Run Command ...')
